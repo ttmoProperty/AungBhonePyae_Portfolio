@@ -1,0 +1,50 @@
+.together {
+    background-color: #2d2d2d;
+}
+
+.together-person1 {
+    padding-left: 20px;
+    color: #fff;
+}
+
+.together-person2 {
+    padding-right: 20px;
+    color : #fff;
+}
+
+.together-content {
+    color : #fff;
+}
+
+.chapters {
+    background-color: #E7FF56;
+}
+
+.button{
+    border: 1px solid #2d2d2d;
+    width: 150px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+.chapter-end-text {
+    text-align: right;
+}
+
+.chapter-border-text {
+    padding-bottom : 9px;
+    border-bottom : 3px solid #2d2d2d;
+}
+
+.besties {
+    background-color: #2d2d2d;
+    text-align: center;
+    color : #fff;
+}
+
+.item {
+    background-color: #fff;
+}
+
