@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel='stylesheet' href='final_project.css' />
+    <link rel='stylesheet' href='{% static "application/index.css"  %}' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
@@ -54,31 +55,33 @@
       </nav>
 
       
-      <div class="together pt-5 pb-5" id='together'>
-          <div class="row pt-5 pb-5">
+      <div class="together pt-5 pb-3" id='together'>
+          <div class="row pt-5 pb-3">
             <div class="col-6">
                 <p align='center' class="together-person1">
-                    <img src="ABP.png" alt="" class="img-fluid">
+                    <img src="{% static 'application/ABP.png' %}" alt="" class="img-fluid">
                     <br>
-                    Person 1
+                    လူဆိုး
                 </p>
             </div>
             <div class="col-6">
                 <p align='center' class="together-person2">
-                    <img src="P2.png" alt="" class="img-fluid">
+                    <img src="{% static 'application/P2.png' %}" alt="" class="img-fluid">
                     <br>
-                    Person 2
+                    ဇယ်လ်
                 </p>
             </div>
           </div>
 
           <div class="container together-content pb-3">
               <p align='center' class="pt-2">
+                <img src="{% static 'application/heart.gif' %}" class='icon'>
+                <br>
                 စက္ကန့်၊မိနစ်၊နာရီတွေ တိုးသွားသလို<br>
                 အချစ်တွေလည်း ပိုတိုးပြီး ချစ်ပေးပါ
               </p>
               <h2 align='center' class="pt-3">
-                20 Days 20 Hours 20 Minutes 20 seconds            
+                21 Days
               </h2>
             <p align='center' class="pt-3"><strong><small>
 "The problems of your past are your business.<br>
@@ -532,134 +535,15 @@ taxiသမား(ဘုရားမီးပိွုင့်၊ လမ်း�
       <div class="container pt-1">
         <div class="row">
           <div class="owl-carousel owl-theme">
+          
+          {% for image in images %}
             <div class="item">
               <img 
               class="img-fluid"
               width="80%"
-              src='1.jpg' />
+              src='{{ image.image.url }}' />
             </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='2.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='3.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='4.jpg' />
-            </div>
-
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='5.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='6.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='7.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='8.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='9.jpg' />
-            </div>
-
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='10.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='11.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='12.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='13.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='14.jpg' />
-            </div>
-
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='15.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='16.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='17.jpg' />
-            </div>
-
-            <div class="item">
-              <img 
-              class="img-fluid"
-              width="80%"
-              src='18.jpg' />
-            </div>
+          {% endfor %}
 
         </div>
 
